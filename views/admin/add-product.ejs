@@ -1,0 +1,62 @@
+<%- include('../includes/head') %>
+
+	<header>
+		<%- include('../includes/navbar') %>
+	</header>
+
+	<main>
+		
+		<div class="container">
+
+			<section class="row mt-3">
+				<div class="col-6 offset-3">
+					<h1><%= pageTitle %></h1>
+					<!-- <p>Bienvenido a <%= pageTitle %></p> -->
+				</div>
+			</section>	
+
+			<section class="row mt-3">
+
+				<form 
+					class="col-6 offset-3" 
+					action="/admin/add-product" 
+					method="POST"
+				>
+					<div class="mb-3">
+						<label for="title">Title</label>
+						<input name="title" type="text" class="form-control">
+					</div>
+					<div class="mb-3">
+						<label for="price">Price</label>
+						<input name="price" type="number" class="form-control">
+					</div>
+					<div class="mb-3">
+						<label for="thumbnail">Imagen</label>
+						<input name="thumbnail" type="text" class="form-control">
+					</div>
+					<div class="mb-3">
+						<label for="brand">Brand</label>
+						<select name="brand" class="form-control">
+							<option value="">--SELECT--</option>
+						</select>
+					</div>
+					<div class="mb-3">
+						<label for="category">Category</label>
+						<select name="category" class="form-control">
+							<option value="">--SELECT--</option>
+						</select>
+					</div>
+					<div class="mb-3">
+						<label for="description">Description</label>
+						<textarea name="description" class="form-control"></textarea>
+					</div>
+					<div class="mb-3">
+						<button class="btn btn-primary">Agregar</button>
+					</div>
+				</form>	
+			</section>
+
+		</div>
+	</main>
+	
+<%- include('../includes/scripts') %>

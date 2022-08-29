@@ -1,0 +1,53 @@
+<%- include('../includes/head') %>
+
+	<header>
+		<%- include('../includes/navbar') %>
+	</header>
+
+	<main>
+		
+		<div class="container">
+
+			<section class="row mt-3">
+				<div class="col-12">
+					<h1><%= pageTitle %></h1>
+					<p>Bienvenido a <%= pageTitle %></p>
+				</div>
+			</section>
+
+			<% if(products.length > 0) { %>
+				<section class="row mt-3">
+					<div class="col-12">
+						
+						<div class="row">
+							<% products.map(product => { %>
+								<div class="col-3">
+									<div class="card">
+										<img 
+											class="card-img-top" 
+											src="<%= product.images[0] %>" 
+											alt="<%= product.title %>"
+										/>
+										<div class="card-body">
+											<h5 class="card-title"><%= product.title %></h5>
+											<p class="card-text"><%= product.description %></p>
+										</div>
+									</div>
+								</div>
+							<% }) %>
+						</div>
+
+					</div>
+				</section>
+			<% } else { %>
+				<section class="row mt-3">
+					<div class="col-12">
+						<h3>No products found!</h3>
+					</div>
+				</section>
+			<% } %>
+
+		</div>
+	</main>
+	
+<%- include('../includes/scripts') %>

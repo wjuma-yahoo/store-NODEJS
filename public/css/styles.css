@@ -1,0 +1,20 @@
+:root {
+
+    --primario:  #277BC0;
+    --secundario:  #FFB200;
+
+    --nunito: 'Nunito', sans-serif;;
+
+}
+
+body, h1, h2, h3, h4, h5, p, span, a {
+    font-family: var(--nunito);
+}
+
+.collapse:not(.show) {
+    display: block;
+}
+
+.bg-primario {
+    background-color: var(--primario);
+}
